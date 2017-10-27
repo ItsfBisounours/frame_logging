@@ -60,7 +60,7 @@ Ready to contribute? Here's how to set up `frame_logging` for local development.
 1. Fork the `frame_logging` repo on GitHub.
 2. Clone your fork locally::
 
-    $ git clone git@github.com:your_name_here/frame_logging.git
+    $ git clone git@github.com:ItsfBisounours/frame_logging.git
 
 3. Install your local copy into a virtualenv. Assuming you have virtualenvwrapper installed, this is how you set up your fork for local development::
 
