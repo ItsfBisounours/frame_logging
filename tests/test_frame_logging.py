@@ -64,7 +64,7 @@ class FrameLoggingTest(TestCase):
         with LogCapture() as l:
             test_obj = TestObj()
             test_obj.tn_attr = 'tn_val'
-            log.error('Renewed contract %s', 'test', obj=test_obj)
+            log.error('Renewed contract test', obj=test_obj)
             l.check(('tests.test_frame_logging',
                      'ERROR', 'Renewed contract test - Impacted object is TestObj(t_val):'
                               ' tn_attr=tn_val, t_attr=t_val'))
@@ -75,6 +75,7 @@ class FrameLoggingTest(TestCase):
             #import pdb; pdb.set_trace()
             log.info('Renewed contract %s', 'test', order=order)
             l.check(('tests.test_frame_logging', 'INFO', 'Renewed contract test - customer_id=1'))
+
 
 if __name__ == '__main__':
     unittest.main()
