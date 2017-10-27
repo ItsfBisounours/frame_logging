@@ -1,13 +1,15 @@
 # -*- coding: utf-8
 from __future__ import unicode_literals, absolute_import
 
+from .formatter_example import FrameFormatterExample
+
 import django
 
 DEBUG = True
 USE_TZ = True
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
+SECRET_KEY = 'ThisValueIsOnlyImportantInProduction'
 
 DATABASES = {
     "default": {
@@ -31,3 +33,5 @@ if django.VERSION >= (1, 10):
     MIDDLEWARE = ()
 else:
     MIDDLEWARE_CLASSES = ()
+
+FRAME_FORMATTER=FrameFormatterExample()
