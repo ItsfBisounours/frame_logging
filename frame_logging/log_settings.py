@@ -5,6 +5,7 @@ from django.conf import settings
 
 
 FRAME_FORMATTER = getattr(settings, 'FRAME_FORMATTER', None)
+FRAME_SEPARATOR = getattr(settings, 'FRAME_SEPARATOR', None)
 
 
 if FRAME_FORMATTER is None:

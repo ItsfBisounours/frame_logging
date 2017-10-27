@@ -10,12 +10,16 @@ from .log_settings import *
 
 frame_formatter = FRAME_FORMATTER
 
+
+frame_separator = FRAME_SEPARATOR or ' - '
+
+
 # private methods
 # log processing functions
 
 def _extract_kwargs_then_process(kwargs, key, format_dict):
     target = kwargs.pop(key, None)
-    format_dict[key] = '' if not target else ' - ' + frame_formatter.format_behaviour[key](target)
+    format_dict[key] = '' if not target else frame_separator + frame_formatter.format_behaviour[key](target)
 
 def _transform_kwargs(**kwargs):
     for key_arg, method in frame_formatter.transform_kwargs_methods.iteritems():
